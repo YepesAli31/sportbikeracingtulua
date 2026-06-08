@@ -35,30 +35,30 @@
 <header class="bg-white shadow-sm border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         <div class="flex items-center">
-            <img src="logo_racing.png" alt="SportBike Logo" class="h-16 w-auto object-contain">
-            <div class="ml-3">
-                <h1 class="font-bold text-3xl uppercase">SPORTBIKE</h1>
-                <p class="font-bold text-sm tracking-widest text-gray-700 uppercase">Racing Tuluá</p>
+            <img src="logo_racing.png" alt="SportBike Logo" class="h-20 w-auto object-contain">
+            <div class="leading-none ml-2">
+                <span class="font-racing text-3xl tracking-tight block text-black">SPORTBIKE</span>
+                <span class="text-xs text-gray-500 font-bold uppercase tracking-widest block mt-1">RACING TULUÁ</span>
             </div>
         </div>
-
-        <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider text-gray-600">
-            <a href="index.html" class="text-black border-b-2 border-bikeText pb-1">INICIO</a>
-            <a href="tienda.html" class="hover:text-black">COMPONENTES</a>
-            <a href="servicios.html" class="hover:text-black">SERVICIOS</a>
-        </nav>
 
         <button id="btn-menu" class="lg:hidden p-2 text-gray-600">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
+
+        <nav id="menu-principal" class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider text-gray-600">
+            <a href="index.html" class="text-black border-b-2 border-bikeText pb-1">INICIO</a>
+            <a href="tienda.html" class="hover:text-black transition-colors">COMPONENTES</a>
+            <a href="servicios.html" class="hover:text-black transition-colors">SERVICIOS</a>
+        </nav>
     </div>
 
     <div id="menu-movil" class="hidden lg:hidden flex flex-col p-4 bg-gray-50 border-t">
-        <a href="index.html" class="py-2 border-b font-bold">INICIO</a>
-        <a href="tienda.html" class="py-2 border-b font-bold">COMPONENTES</a>
-        <a href="servicios.html" class="py-2 font-bold">SERVICIOS</a>
+        <a href="index.html" class="py-2 border-b">INICIO</a>
+        <a href="tienda.html" class="py-2 border-b">COMPONENTES</a>
+        <a href="servicios.html" class="py-2">SERVICIOS</a>
     </div>
 </header>
     <section class="bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-950 text-white flex-1 flex items-center py-20 px-4 relative overflow-hidden">
@@ -80,7 +80,6 @@
 <script>
     const btn = document.getElementById('btn-menu');
     const menuMovil = document.getElementById('menu-movil');
-    
     btn.addEventListener('click', () => {
         menuMovil.classList.toggle('hidden');
     });
